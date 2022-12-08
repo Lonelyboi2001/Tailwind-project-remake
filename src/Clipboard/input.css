@@ -1,0 +1,74 @@
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @layer components {
+        @media (max-width: 768px) {
+          .head-container {
+            background-image: url('/assets/bg-header-mobile.png') !important;
+          }
+        }
+        .head-container {
+          background-image: url('/assets/bg-header-desktop.png');
+        }
+        .content-container {
+          @apply text-center;
+        }
+        .content-container .title {
+          @apply text-4xl font-semibold mb-6;
+        }
+        .title p {
+          @apply px-12 mb-8;
+        }
+        .content p {
+          @apply my-10 px-14 leading-9;
+        }
+        .button-container {
+          @apply flex w-[22rem] h-14 mb-5 mx-auto rounded-full items-center text-center justify-center;
+        }
+        .btn-primary {
+          @apply text-xl text-white rounded-[35px];
+        }
+        .track.content p,
+        .access.content p,
+        .charge.content p {
+          @apply text-xl leading-8 my-3;
+        }
+        .track.content p {
+          @apply md:p-0;
+        }
+        .fea-title,
+        .cha-title {
+          @apply text-2xl font-semibold;
+        }
+        .features {
+          @apply my-11;
+        }
+        .charge-list {
+          @apply flex flex-col justify-center items-center text-center my-16;
+        }
+        .cha-image {
+          @apply mb-10;
+        }
+        .cha-title {
+          @apply mb-5;
+        }
+        .cha-content {
+          @apply px-9;
+        }
+        .brand-logo {
+          @apply my-44;
+        }
+        .brand-container {
+          @apply flex flex-col gap-14;
+        }
+        .brand-container img {
+          @apply w-1/3 m-auto;
+        }
+        .menu-link-container li {
+          @apply mb-4;
+        }
+        ul:has(li:matches(p)) {
+          @apply bg-slate-600;
+        }
+      }
